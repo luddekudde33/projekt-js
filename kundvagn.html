@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini sajten</title>
-    <link rel="stylesheet" href="om-oss.css" />
+    <link rel="stylesheet" href="kundvagn.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,6 @@
       src="https://kit.fontawesome.com/6b90542a83.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
   </head>
   <body onload="loadOrderRows('cart')">
     <header>
@@ -51,47 +50,25 @@
         </ul>
       </nav>
     </header>
-  </body>
-  <body>
     <main>
-      <section>
-        <h2>Om oss</h2>
-        <p>
-          Skobolaget är en självdriven skobutik med en passion för
-          kvalitetsskor. Vi grundades 2023 av Ludvig Östholm och har sedan dess
-          strävat efter att erbjuda våra kunder det bästa urvalet av STORA-skor.
-        </p>
-      </section>
+      <table>
+        <thead>
+          <tr>
+            <th>Produkt</th>
+            <th>Pris</th>
+          </tr>
+        </thead>
+        <tbody id="cart">
+          <!-- Här fylls kundvagnens produkter i med JavaScript -->
+        </tbody>
+      </table>
 
-      <section>
-        <h2>Vårt team</h2>
-        <p>
-          Vi på Skobolaget är stolta över vårt dedikerade team av experter inom
-          skor. Från Våran erfarna inköpare till Våran kunniga säljare, vi
-          strävar för att ge våra kunder den bästa möjliga shoppingupplevelsen.
-        </p>
-        <ul>
-          <li>Ludvig Östholm - Grundare och VD</li>
-          <li>Ludvig Östholm - Grundare och Inköpare</li>
-          <li>Ludvig Östholm -Grundare och Butikschef</li>
-          <li>Ludvig Östholm - Grundare och Säljare</li>
-          <li>Fredrik Helleblad - Fastighetskötare</li>
-        </ul>
-      </section>
+      <div id="total">
+        <p>Totalt: <span id="total-price"></span> kr</p>
+      </div>
 
-      <section>
-        <h2>Vårt engagemang</h2>
-        <p>
-          På Skobolaget är vi engagerade i att ge tillbaka till samhället. Vi
-          donerar regelbundet till välgörenhetsorganisationer och arbetar aktivt
-          för att minska vår påverkan på miljön genom att använda miljövänliga
-          material så som helt nyproducerad plast och metoder som andvänder sig
-          av fossila bränslen så mycket som möjlt .
-        </p>
-      </section>
+      <button id="buy-btn">Köp</button>
     </main>
-
-    <p class="copy">&copy; 2023 Skobolaget. Alla rättigheter förbehållna.</p>
     <footer>
       <a href="https://www.instagram.com/ludvig_ostholm/"
         ><i class="fa-brands fa-instagram"></i
@@ -103,5 +80,6 @@
         ><i class="fa-brands fa-twitter"></i
       ></a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

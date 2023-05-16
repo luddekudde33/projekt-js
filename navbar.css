@@ -56,6 +56,15 @@ nav a:hover {
   color: white;
 }
 
+nav li table {
+  display: none;
+  position: absolute;
+  background-color: #388e3c;
+  padding: 10px;
+  width: 200px;
+  top: 100%;
+  left: 0;
+}
 nav li ul {
   display: none;
   position: absolute;
@@ -65,7 +74,11 @@ nav li ul {
   top: 100%;
   left: 0;
 }
-
+nav li:hover table {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0px 15px 49px 2px rgba(117, 117, 117, 0.75);
+}
 nav li:hover ul {
   display: block;
   border-radius: 10px;

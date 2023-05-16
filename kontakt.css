@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.logga > img {
+  width: 100px;
+}
+#map {
+  width: 100%;
+  height: 400px;
+}

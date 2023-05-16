@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini sajten</title>
+    <link rel="stylesheet" href="kontakt.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6b90542a83.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </head>
+  <body onload="loadOrderRows('bigCart')">
+    <header>
+      <a class="logga" href="index.html">
+        <img src="bilder/Skobolaget-removebg-preview.png" />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="produkter.html">Skor</a>
+            <ul>
+              <li><a href="produkter.html">storlek 45</a></li>
+              <li><a href="produkter.html">storlek 46</a></li>
+              <li><a href="produkter.html">storlek 47</a></li>
+            </ul>
+          </li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="om-oss.html">Om Oss</a></li>
+          <li>
+            <a href="kundvagn.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <table id="cart">
+                <tr>
+                  <th>name</th>
+                  <th>price</th>
+                </tr>
+              </table>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <table id="bigCart">
+      <tr>
+        <th>name</th>
+        <th>price</th>
+      </tr>
+    </table>
+    <footer>
+      <a href="https://www.instagram.com/ludvig_ostholm/"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="https://www.facebook.com/profile.php?id=100011428367056"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a href="https://twitter.com/ludvig_ostholm"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+    </footer>
+  </body>
+</html>

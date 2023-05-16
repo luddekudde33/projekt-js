@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webbshop</title>
+    <link rel="stylesheet" type="text/css" href="produkter.css" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link rel="stylesheet" type="text/css" href="footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6b90542a83.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body onload="loadOrderRows('cart')">
+    <header>
+      <a class="logga" href="index.html">
+        <img src="bilder/Skobolaget-removebg-preview.png" />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="produkter.html">Skor</a>
+            <ul>
+              <li><a href="#vans">Vans</a></li>
+              <li><a href="#nike">Nike</a></li>
+              <li><a href="#newBalance">New Balance</a></li>
+            </ul>
+          </li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="om-oss.html">Om Oss</a></li>
+          <li>
+            <a href="kundvagn.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <table id="cart">
+                <tr>
+                  <th>name</th>
+                  <th>price</th>
+                </tr>
+              </table>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="produkter">
+        <h2>Våra Skor</h2>
+        <div class="produktlista">
+          <div id="vans" class="produkt">
+            <img src="bilder/Era-black.webp" alt="Produkt 1" />
+            <div class="produktText">
+              <h3>Era black</h3>
+              <p>pris: 750kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'Era black', 'price':750})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/vans-o-school.webp" alt="Produkt 2" />
+            <div class="produktText">
+              <h3>o-school black</h3>
+              <p>pris: 750kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                  <option value="alternativ4">51</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'old-school black', 'price':750})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/vans-auten-navy.webp" alt="Produkt 3" />
+            <div class="produktText">
+              <h3>Authentic navy</h3>
+              <p>pris: 750kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'Authentic navy', 'price':750})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/era-navy.webp" alt="Produkt 4" />
+            <div class="produktText">
+              <h3>Era navy</h3>
+              <p>pris: 750kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'Era navy', 'price':750})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/vans-slipon-white.webp" alt="Produkt 5" />
+            <div class="produktText">
+              <h3>Slip-on white</h3>
+              <p>pris: 750kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'Slip-on white', 'price':750})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/vans-slipon-black.webp" alt="Produkt 6" />
+            <div class="produktText">
+              <h3>Slip-on black</h3>
+              <p>pris: 750kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'Slip-on black', 'price':750})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div id="nike" class="produkt">
+            <img src="bilder/nikepegablack.webp" alt="Produkt 7" />
+            <div class="produktText">
+              <h3>Pegasus white</h3>
+              <p>pris: 1250kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                  <option value="alternativ4">51</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'Pegasus white', 'price':1250})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/nikevomeroblack.webp" alt="Produkt 8" />
+            <div class="produktText">
+              <h3>Vomero black</h3>
+              <p>pris: 1250kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'Vomero black', 'price':1250})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/pegasus-black.webp" alt="Produkt 9" />
+            <div class="produktText">
+              <h3>Pegasus black</h3>
+              <p>pris: 1250kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'Pegasus black', 'price':1250})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/flexrunblack.webp" alt="Produkt 10" />
+            <div class="produktText">
+              <h3>Flexrun black</h3>
+              <p>pris: 999kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button
+                onclick="addToCart({'name':'Flexrun black', 'price':999})"
+              >
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/vomerowhite.webp" alt="Produkt 11" />
+            <div class="produktText">
+              <h3>Vomero white</h3>
+              <p>pris: 999kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'Vomero white', 'price':999})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/victorione.webp" alt="Produkt 12" />
+            <div class="produktText">
+              <h3>Victori one</h3>
+              <p>pris: 349kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'Victori one', 'price':349})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div id="newBalance" class="produkt">
+            <img src="bilder/574gold.webp" alt="Produkt 13" />
+            <div class="produktText">
+              <h3>574 gold</h3>
+              <p>pris: 1499kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                  <option value="alternativ4">51</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'574 gold', 'price':1499})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/ct300 navy.webp" alt="Produkt 14" />
+            <div class="produktText">
+              <h3>Ct300 navy</h3>
+              <p>pris: 1199kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'Ct300 navy', 'price':1199})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/860 black.webp" alt="Produkt 15" />
+            <div class="produktText">
+              <h3>860 black</h3>
+              <p>pris: 2099kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'860 black', 'price':2099})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/1080 yellow.webp" alt="Produkt 16" />
+            <div class="produktText">
+              <h3>1080 yellow</h3>
+              <p>pris: 1299kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'1080 yellow', 'price':1299})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/796blue.webp" alt="Produkt 17" />
+            <div class="produktText">
+              <h3>796 blue</h3>
+              <p>pris: 1899kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'796 blue', 'price':1899})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+          <div class="produkt">
+            <img src="bilder/574green.webp" alt="Produkt 18" />
+            <div class="produktText">
+              <h3>574 green</h3>
+              <p>pris: 1349kr</p>
+              <p>
+                storlek:
+                <select>
+                  <option value="alternativ1">45</option>
+                  <option value="alternativ2">46</option>
+                  <option value="alternativ3">47</option>
+                  <option value="alternativ4">48</option>
+                  <option value="alternativ4">49</option>
+                  <option value="alternativ4">50</option>
+                </select>
+              </p>
+              <button onclick="addToCart({'name':'574 green', 'price':1349})">
+                Lägg i kundvagn
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <p>18 AV 18 PRODUKTER VISAS</p>
+    </main>
+    <footer>
+      <a href="https://www.instagram.com/ludvig_ostholm/"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="https://www.facebook.com/profile.php?id=100011428367056"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a href="https://twitter.com/ludvig_ostholm"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+    </footer>
+  </body>
+</html>
