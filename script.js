@@ -15,7 +15,7 @@ function addOrderRowToHtml(shoe, id){
     price.innerHTML = shoe.price;
     row.appendChild(name);
     row.appendChild(price);
-    cart.appendChild(row);
+    cart.appendChild(row); //lägger till raden i varukorgen
 }
 
 function loadOrderRows(id){
@@ -29,9 +29,9 @@ function updateTotal() {
     const orderRows = JSON.parse(localStorage.getItem('orderRows') || "[]");
     let totalPrice = 0;
     for (const orderRow of orderRows) {
-        totalPrice += orderRow.price;
+        totalPrice += orderRow.price; //lägger till varje pris i orderRows i totalen
     }
-    document.getElementById("total-price").textContent = totalPrice;
+    document.getElementById("total-price").textContent = totalPrice; // uppdaterar i html
 }
 
 loadOrderRows('cart');
@@ -39,24 +39,8 @@ updateTotal();
 
 const buyButton = document.getElementById('buy-btn');
 buyButton.addEventListener('click', () => {
-    localStorage.clear();
+    localStorage.clear(); 
     document.getElementById('cart').innerHTML = '';
     updateTotal();
     alert('Tack för ditt köp!');
-});
-
-//map (kopierad)
-document.addEventListener('DOMContentLoaded', function() {
-    mapboxgl.accessToken = 'YOUR_ACCESS_TOKEN'; // Byt ut med din egen access token från Mapbox
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11', // Byt ut med den önskade kartstilen från Mapbox
-        center: [59.4, 49.3], // Byt ut med koordinaterna för den plats du vill centrera kartan på
-        zoom: 12 // Justera zoomnivån efter behov
-    });
-
-    // Lägg till markör för platsen på kartan
-    var marker = new mapboxgl.Marker()
-        .setLngLat([59.3, 49.3]) // Byt ut med koordinaterna för den plats du vill ha markören på
-        .addTo(map);
 });

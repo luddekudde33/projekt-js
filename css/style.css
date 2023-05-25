@@ -52,4 +52,5 @@
   gap: 20px;
   align-items: center;
   flex-wrap: nowrap;
+  overflow: scroll;
 }
